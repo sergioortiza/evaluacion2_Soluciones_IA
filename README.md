@@ -19,28 +19,9 @@ Además mantiene **memoria de sesión**, por lo que el operador puede dar seguim
 
 ## 2. Arquitectura
 
-![Diagrama de orquestación](docs/arquitectura.png)
+![Diagrama de orquestación](docsarquitectura.png)
 
-> 📌 Guarda el diagrama como `docs/arquitectura.png` para que se vea aquí. Versión equivalente en Mermaid:
 
-```mermaid
-flowchart TD
-    OP([Operador de Planta]) -->|Instrucción en lenguaje natural| ORQ["Orquestador FrigoAgent<br/>+ Memoria de Sesión"]
-    ORQ <-->|Invocación LLM| LLM["LPU Inference Engine<br/>(Groq)"]
-
-    ORQ -->|1. Lee estado IoT| T1[consultar_telemetria_camara]
-    ORQ -->|2. Evalúa desviación T° y PSI| T2[calcular_criticidad_y_riesgo]
-    ORQ -->|3. Busca protocolo RAG| T3[buscar_protocolo_tecnico]
-    ORQ -->|4. Toma de decisiones adaptativa| DEC{¿Requiere OT?}
-
-    DEC -->|Crítica o Alta| T4[registrar_orden_trabajo]
-    DEC -->|Estado Normal| NORM["Informa estabilidad<br/>Omite escritura"]
-
-    T1 --> DB[(SENSORES_DB)]
-    T3 <--> RAG[("Memoria semántica RAG<br/>FAISS + MiniLM")]
-    T4 --> JSON[(ordenes_trabajo.json)]
-    ORQ <-->|Continuidad conversacional| MEM[("Memoria corto plazo<br/>store_sesiones")]
-```
 
 ### Componentes
 
