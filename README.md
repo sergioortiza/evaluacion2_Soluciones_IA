@@ -53,10 +53,10 @@ Además mantiene **memoria de sesión**, por lo que el operador puede dar seguim
 
 ## 4. Memoria y recuperación de contexto
 
-- **Memoria de corto plazo (IE3):** `store_sesiones[session_id]` guarda todo el historial de mensajes de la conversación. Permite instrucciones como *"procesa la otra cámara pendiente"* sin volver a consultar los sensores.
-- **Memoria de largo plazo / semántica (IE4):** los documentos corporativos (protocolos `F-101` y `F-204`, política `SLA-01` y bitácora `HIST-01`) se vectorizan con MiniLM (384 dimensiones) y se indexan en FAISS. El agente recupera por similitud semántica el protocolo que corresponde a los síntomas detectados.
+- **Memoria de corto plazo :** `store_sesiones[session_id]` guarda todo el historial de mensajes de la conversación. Permite instrucciones como *"procesa la otra cámara pendiente"* sin volver a consultar los sensores.
+- **Memoria de largo plazo / semántica :** los documentos corporativos (protocolos `F-101` y `F-204`, política `SLA-01` y bitácora `HIST-01`) se vectorizan con MiniLM (384 dimensiones) y se indexan en FAISS. El agente recupera por similitud semántica el protocolo que corresponde a los síntomas detectados.
 
-## 5. Planificación y toma de decisiones (IE5)
+## 5. Planificación y toma de decisiones 
 
 El esquema de planificación está definido en el *system prompt* y lo ejecuta el ciclo de orquestación:
 
