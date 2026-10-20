@@ -158,5 +158,4 @@ Se utilizó **Google Gemini** como asistente de apoyo para el código en Google 
 - Google. (2026). *Gemini* [Modelo de lenguaje grande]. https://gemini.google.com/
 - Groq. (2026). *GroqCloud API Documentation & LPU Inference Engine*. https://console.groq.com/docs
 - LangChain. (s. f.). *LangChain documentation*. https://python.langchain.com/
-- Johnson, J., Douze, M., & Jégou, H. (2019). Billion-scale similarity search with GPUs. *IEEE Transactions on Big Data, 7*(3), 535–547.
-- Reimers, N., & Gurevych, I. (2019). Sentence-BERT: Sentence embeddings using Siamese BERT-networks. *EMNLP-IJCNLP 2019*.
+
