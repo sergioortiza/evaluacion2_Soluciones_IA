@@ -2,7 +2,7 @@
 
 **Asignatura:** ISY0101 – Ingeniería de Soluciones con IA · Evaluación Parcial N°2
 **Institución:** Duoc UC · Sede San Bernardo
-**Integrantes:** Sergio Andrés Ortiz Acevedo · [Nombre compañero/a]
+**Integrante:** Sergio Andrés Ortiz Acevedo 
 
 ---
 
